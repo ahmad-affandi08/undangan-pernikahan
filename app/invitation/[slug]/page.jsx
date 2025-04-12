@@ -4,9 +4,9 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import Flower from "../../../components//Flower";
-import HeroHeader from "../../../components//HeroHeader";
-import GuestGreeting from "../../../components//GuestGreeting";
+import Flower from "../../../components/Flower";
+import HeroHeader from "../../../components/HeroHeader";
+import GuestGreeting from "../../../components/GuestGreeting";
 import OpenInvitationButton from "../../../components/OpenInvitationButton";
 
 export default function GuestPage() {
@@ -33,7 +33,7 @@ export default function GuestPage() {
   }, [slug]);
 
   return (
-    <div className="fixed inset-0 min-h-screen w-full overflow-hidden bg-gradient-to-b from-[#fdfaf5] to-[#f9f4ef] text-center font-sans text-brown-text px-6 flex flex-col justify-center items-center">
+    <div className="fixed inset-0 w-full min-h-screen overflow-hidden bg-gradient-to-b from-[#fdfaf5] to-[#f9f4ef] text-center font-sans text-brown-text px-[env(safe-area-inset-left,_1rem)] pr-[env(safe-area-inset-right,_1rem)] pt-[env(safe-area-inset-top,_1rem)] pb-[env(safe-area-inset-bottom,_1rem)] flex flex-col justify-center items-center">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -59,7 +59,7 @@ export default function GuestPage() {
       <GuestGreeting guest={guest} loading={loading} error={error} />
 
       {/* Button */}
-      <OpenInvitationButton />
+      <OpenInvitationButton className="mt-6 mb-[env(safe-area-inset-bottom,_2rem)]" />
     </div>
   );
 }
