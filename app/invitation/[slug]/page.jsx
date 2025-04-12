@@ -33,7 +33,7 @@ export default function GuestPage() {
   }, [slug]);
 
   return (
-    <div className="relative h-screen w-full bg-gradient-to-b from-[#fdfaf5] to-[#f9f4ef] text-center font-sans text-brown-text px-6 flex flex-col justify-center overflow-hidden items-center">
+    <div className="fixed inset-0 min-h-screen w-full overflow-hidden bg-gradient-to-b from-[#fdfaf5] to-[#f9f4ef] text-center font-sans text-brown-text px-6 flex flex-col justify-center items-center">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
